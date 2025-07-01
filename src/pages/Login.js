@@ -8,14 +8,15 @@ const Login = () => {
     const [loading, setLoading] = useState(false); 
     const [error, setError] = useState(""); 
 
+    const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
         setError("");
         try {
-            const { data } = await axios.post("http://localhost:5000/api/auth/login", { email, password });
+            const { data } = await axios.post(`${BACKEND_URL}/api/auth/login`, { email, password });
             localStorage.setItem("token", data.token);
-      ;
             window.location.href = "/dashboard"; 
         } catch (err) {
             setError(err.response?.data?.message || "Login failed. Invalid Credentials.");
