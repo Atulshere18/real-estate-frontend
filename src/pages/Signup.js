@@ -9,12 +9,14 @@ const Signup = () => {
     const [loading, setLoading] = useState(false); 
     const [error, setError] = useState(""); 
 
+    const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
         setError("");
         try {
-            await axios.post("http://localhost:5000/api/auth/signup", { username, email, password });
+            await axios.post(`${BACKEND_URL}/api/auth/signup`, { username, email, password });
             alert("Signup successful. Please log in.");
             window.location.href = "/login"; 
         } catch (err) {
