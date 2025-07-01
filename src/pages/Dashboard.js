@@ -112,7 +112,7 @@ const Dashboard = () => {
             {loading ? (
                 <p>Loading properties...</p>
             ) : properties.length === 0 ? (
-                <p>No properties found.</p>
+                <p>No properties found.. add new one </p>
             ) : (
                 properties.map((property) => (
                     <div className="property-card" key={property._id}>
