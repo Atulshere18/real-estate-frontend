@@ -10,6 +10,8 @@ const Dashboard = () => {
     const [totalPages, setTotalPages] = useState(1);
     const [loading, setLoading] = useState(false);
 
+    const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+
     useEffect(() => {
         const token = localStorage.getItem("token");
         if (!token) {
@@ -26,7 +28,7 @@ const Dashboard = () => {
         try {
             const token = localStorage.getItem("token");
             const { data } = await axios.get(
-                `http://localhost:5000/api/properties?search=${searchQuery}&page=${page}&limit=10`,
+                `${BACKEND_URL}/api/properties?search=${searchQuery}&page=${page}&limit=10`,
                 {
                     headers: { Authorization: `Bearer ${token}` },
                 }
@@ -53,7 +55,7 @@ const Dashboard = () => {
     const handleDelete = async (id) => {
         try {
             const token = localStorage.getItem("token");
-            await axios.delete(`http://localhost:5000/api/properties/${id}`, {
+            await axios.delete(`${BACKEND_URL}/api/properties/${id}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             alert("Property deleted successfully!");
@@ -70,9 +72,13 @@ const Dashboard = () => {
         }
         try {
             const token = localStorage.getItem("token");
-            await axios.put(`http://localhost:5000/api/properties/${id}`, editingProperty, {
-                headers: { Authorization: `Bearer ${token}` },
-            });
+            await axios.put(
+                `${BACKEND_URL}/api/properties/${id}`,
+                editingProperty,
+                {
+                    headers: { Authorization: `Bearer ${token}` },
+                }
+            );
             alert("Property updated successfully!");
             setEditingProperty(null);
             fetchProperties();
