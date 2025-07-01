@@ -1,0 +1,150 @@
+/* General Styling */
+.dashboard {
+    padding: 20px;
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #F8F9FA;
+    color: #2C3E50;
+}
+
+/* Add Property Button */
+.add-property-btn {
+    background-color: #0A3D62;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+.logout-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.logout-btn:hover {
+    background-color: #d32f2f;
+}
+
+.add-property-btn:hover {
+    background-color: #74B9FF;
+}
+
+/* Search Input */
+.search-input {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Property Card */
+.property-card {
+    border: 1px solid #E5E5E5;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Inputs in Edit Mode */
+.property-edit-form input,
+.property-edit-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.property-edit-form input:focus,
+.property-edit-form textarea:focus {
+    border-color: #74B9FF;
+    outline: none;
+}
+
+/* Button Styling */
+.actions, .edit-actions {
+    margin-top: 10px;
+}
+
+.edit-btn, .delete-btn, .save-btn, .cancel-btn {
+    padding: 8px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit-btn {
+    background-color: #FFC107;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #FFD54F;
+}
+
+.delete-btn {
+    background-color: #DC3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #E57373;
+}
+
+.save-btn {
+    background-color: #28A745;
+    color: white;
+}
+
+.save-btn:hover {
+    background-color: #66BB6A;
+}
+
+.cancel-btn {
+    background-color: #6C757D;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #A6A9AD;
+}
+
+/* Pagination Styling */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination-btn {
+    background-color: #0A3D62;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-btn:hover {
+    background-color: #74B9FF;
+}
+
+.pagination-btn:disabled {
+    background-color: #CCC;
+    cursor: not-allowed;
+}
