@@ -19,7 +19,7 @@ const AddProperty = () => {
         try {
             const token = localStorage.getItem("token");
             await axios.post(
-                "http://localhost:5000/api/properties",
+           `${BACKEND_URL}/api/properties`,
                 { title, description, location, price, image },
                 { headers: { Authorization: `Bearer ${token}` } }
             );
