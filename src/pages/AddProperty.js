@@ -10,6 +10,7 @@ const AddProperty = () => {
     const [image, setImage] = useState("");
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
+    const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
