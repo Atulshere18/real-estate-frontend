@@ -45,4 +45,4 @@ npm start
 5. Environment Variables
 
 Create a .env file in the root directory with the following content:
-REACT_APP_API_BASE_URL=http://localhost:5000/api
+REACT_APP_BACKEND_URL=https://real-estate-backend-8.onrender.com
