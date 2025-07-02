@@ -6,7 +6,7 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import AddProperty from "./pages/AddProperty";
-
+import NotFound from "./pages/NotFound";
 const App = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem("token"));
 
@@ -33,6 +33,7 @@ const App = () => {
     return (
         <Router>
             <Routes>
+                 <Route path="*" element={<NotFound />} /> 
                 <Route path="/" element={<Home />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
